@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Type module of BaseModel"""
+""" module of BaseModel """
 
 import models
 import uuid
@@ -7,10 +7,10 @@ from datetime import datetime
 
 
 class BaseModel:
-    """Type class of BaseModel"""
+    """ Type class of BaseModel """
 
     def __init__(self, *args, **kwargs):
-        """Type method initialize"""
+        """ Type method initialize """
         timeformat = "%Y-%m-%dT%H:%M:%S.%f"
         if len(kwargs) != 0:
             for key, val in kwargs.items():
@@ -24,16 +24,16 @@ class BaseModel:
             self.updated_at = datetime.today()
 
     def __str__(self):
-        """Type method __str__"""
+        """ Type method __str__ """
         class_name = self.__class__.__name__
         return "[{}] ({}) {}".format(class_name, self.id, self.__dict__)
 
     def save(self):
-        """Type method save"""
+        """ Type method save """
         self.updated_at = datetime.today()
 
     def to_dict(self):
-        """Type method to_dict"""
+        """ Type method to_dict """
         rt_dict = self.__dict__.copy()
         rt_dict["created_at"] = self.created_at.isoformat()
         rt_dict["updated_at"] = self.updated_at.isoformat()
