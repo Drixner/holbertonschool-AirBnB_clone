@@ -32,7 +32,7 @@ class HBNBCommand(cmd.Cmd):
         if not args:
             print("** class name missing **")
         elif args not in HBNBCommand.__classes:
-            rint("** class doesn't exist **")
+            print("** class doesn't exist **")
         else:
             cls_d = {'BaseModel': BaseModel}
 
@@ -62,7 +62,7 @@ class HBNBCommand(cmd.Cmd):
         obj_dict = storage.all()  # all function from file_storage.py
         if len(arg) == 0:
             print("** class name missing **")
-        elif arg[0] not in HBNBCommand.classes:
+        elif arg[0] not in HBNBCommand.__classes:
             print("** class doesn't exist **")
         elif len(arg) == 1:
             print("** instance id missing **")
