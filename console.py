@@ -21,3 +21,6 @@ class HBNBCommand(cmd.Cmd):
         """ Exit the shell """
         print()
         retur True
+
+if __name__ == '__main__':
+    HBNBCommand().cmdloop()
