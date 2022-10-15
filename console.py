@@ -55,7 +55,7 @@ class HBNBCommand(cmd.Cmd):
             print(obj_dict["{}.{}".format(arg[0], arg[1])])
 
     def do_destroy(self, line):
-        """ Destroy instance specified by user; Save changes to JSON file """
+        """ Destroy instance specified by user; save changes to JSON file """
         arg = line.split()
         obj_dict = storage.all()  # all function from file_storage.py
         if len(arg) == 0:
