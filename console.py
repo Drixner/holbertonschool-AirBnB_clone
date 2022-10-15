@@ -2,6 +2,8 @@
 """ Console to manage hbnb data """
 
 import cmd
+from models import storage
+from models.base_model import BaseModel
 
 
 class HBNBCommand(cmd.Cmd):
@@ -45,7 +47,7 @@ class HBNBCommand(cmd.Cmd):
         obj_dict = storage.all()  # all function from file_storage.py
         if len(arg) == 0:
             print("** class name missing **")
-        elif arg[0] not in HBNBCommand.classes:
+        elif arg[0] not in HBNBCommand.__classes:
             print("** class doesn't exist **")
         elif len(arg) == 1:
             print("** instance id missing **")
