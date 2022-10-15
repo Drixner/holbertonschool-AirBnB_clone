@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-import cmd
-
 """ Console to manage hbnb data """
+
+import cmd
 
 
 class HBNBCommand(cmd.Cmd):
@@ -13,13 +13,14 @@ class HBNBCommand(cmd.Cmd):
         pass
 
     def do_quit(self, line):
-        """ Exit the shell """
+        """ Quit command to exit the program """
+        print()
         return True
 
     def do_EOF(self, line):
-        """ Exit the shell """
+        """ Quit command to exit the program """
         print()
-        retur True
+        return True
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
