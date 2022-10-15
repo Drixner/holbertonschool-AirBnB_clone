@@ -30,7 +30,7 @@ class HBNBCommand(cmd.Cmd):
         if not args:
             print("** class name missing **")
         elif args not in HBNBCommand.__classes:
-            print("** class doesn't exist **")
+            rint("** class doesn't exist **")
         else:
             cls_d = {'BaseModel': BaseModel}
 
@@ -47,12 +47,28 @@ class HBNBCommand(cmd.Cmd):
             print("** class name missing **")
         elif arg[0] not in HBNBCommand.classes:
             print("** class doesn't exist **")
-        elif len(arg) == 1
+        elif len(arg) == 1:
             print("** instance id missing **")
         elif "{}.{}".format(arg[0], arg[1]) not in obj_dict:
             print("** no instance found **")
         else:
             print(obj_dict["{}.{}".format(arg[0], arg[1])])
+
+    def do_destroy(self, line):
+        """ Destroy instance specified by user; Save changes to JSON file """
+        arg = line.split()
+        obj_dict = storage.all()  # all function from file_storage.py
+        if len(arg) == 0:
+            print("** class name missing **")
+        elif arg[0] not in HBNBCommand.classes:
+            print("** class doesn't exist **")
+        elif len(arg) == 1:
+            print("** instance id missing **")
+        elif "{}.{}".format(arg[0], arg[1]) not in obj_dict:
+            print("** no instance found **")
+        else:
+            del (obj_dict["{}.{}".format(arg[0], arg[1])])
+            storage.save()
 
 
 if __name__ == '__main__':
