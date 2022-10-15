@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """ Console to manage hbnb data """
+
+
 import cmd
 
 
