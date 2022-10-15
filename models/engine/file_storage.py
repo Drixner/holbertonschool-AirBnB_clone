@@ -36,5 +36,9 @@ class FileStorage:
         if os.path.exists(FileStorage.__file_path):
             with open(FileStorage.__file_path) as fd:
                 obj_dict = json.load(fd)
+                for obj in obj_dict.values():
+                    cls_d = obj['__class__']
+                    del obj['__class__']
+                    self.new(eval(cls_d)(**obj))
 
             return
