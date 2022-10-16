@@ -105,7 +105,7 @@ class HBNBCommand(cmd.Cmd):
             storage.all()[key].save()
         elif len(args) == 0:
             print("** class name missing **")
-        elif args[0] not in HBNBCommand.classes:
+        elif args[0] not in HBNBCommand.__classes:
             print("** class doesn't exist **")
         elif len(args) == 1:
             print("** instance id missing **")
