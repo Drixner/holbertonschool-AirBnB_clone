@@ -2,8 +2,9 @@
   <img src=" " alt="Hbton logo">
 </p>
 
-<p align="left"> AirBnB clone project</p>
----
+# AirBnB clone project
+
+
 ## Description
 HolbertonBnB is a web app with a full development of back-end and front-end API
 integrating also SQL storage 
@@ -31,6 +32,10 @@ FileStorage named storage.
 JSON file file.json.
 Class instances are created, updated, or deleted and storage object registers
 changes intofile.json.
+
+<p align="center">
+  <img src="https://github.com/Drixner/holbertonschool-AirBnB_clone/blob/master/815046647d23428a14ca.png?raw=true" alt="storage">
+</p>
 
 ## Console
 The console is a CLI that allows the use of data as backend tool.
