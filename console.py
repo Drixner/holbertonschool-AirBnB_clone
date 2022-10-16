@@ -97,15 +97,15 @@ class HBNBCommand(cmd.Cmd):
         args = line.split()
         no_change = ["id", "created_at", "updated_at"]
         obj_dict = storage.all()  # all() function from file_storage.py
-        if not args:
+        if not line:
             print("** class name missing **")
-        elif args[0] not in __classes.keys():
+        elif args[0] not in HBNBCommand.__classes.keys():
             print("** class doesn't exist **")
         elif len(args) == 1:
             print("** instance id missing **")
         else:
             class_id = "{}.{}".format(args[0], args[1])
-            if class_id not in storage.all:
+            if class_id not in storage.all():
                 print("** no instance found **")
             elif len(args) < 3:
                 print("** attribute name missing **")
@@ -114,7 +114,7 @@ class HBNBCommand(cmd.Cmd):
             elif args[2] not in no_change:
                 obj = obj_dict[class_id]
                 obj.__dict__[args[2]] = args[3]
-                obj.updated_at = datetime.now
+                obj.updated_at = datetime.now()
                 obj.storage.save()
 
 
