@@ -16,11 +16,11 @@ This is an educational purposes clone from [AirBnB](https://www.airbnb.com/)
 
 This projects uses the following classes:
 
-|     | BaseModel | FileStorage | User | Amenity | City | Place | Review | State |
+|     | BaseModel | FileStorage | User | Amenity | City | State | Place | Review |
 | --- | --------- | ----------- | -----| ----- | -----| ------- | ----- | ------ |
-| Public instance attributes | id<br>created_at<br>updated_at | | Inherits BaseModel | Inherits BaseModel | Inherits BaseModel | Inherits BaseModel | Inherits BaseModel | Inherits BaseModel |
+| Public instance attributes | id<br>created_at<br>updated_at | | Inherits from BaseModel | Inherits from BaseModel | Inherits from BaseModel | Inherits from BaseModel | Inherits from BaseModel | Inherits from BaseModel |
 | Public instance methods | save<br>to_dict | all<br>new<br>save<br>reload |  |  |  |  |  |  |
-| Public class attributes | | | email<br>password<br>first_name<br>last_name| name | _id<br>name | name | city_id<br>user_id<br>name<br>description<br>_rooms<br>_bathrooms<br>max_guest<br>price<br>latitude<br>longitude<br>amenity_id | place_id<br>user_id<br>text |
+| Public class attributes | | | email<br>password<br>first_name<br>last_name| name | name_id<br>name | name | city_id<br>user_id<br>name<br>description<br>number_rooms<br>number_bathrooms<br>max_guest<br>price<br>latitude<br>longitude<br>amenity_ids | place_id<br>user_id<br>text |
 | Private class attributes | | file_path<br>objects | | | | | | |
 
 ## Storage
