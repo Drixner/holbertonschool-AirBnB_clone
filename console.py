@@ -94,32 +94,28 @@ class HBNBCommand(cmd.Cmd):
 
     def do_update(self, line):
         """Update if given exact object, exact attribute"""
-        args = parse(line)
-        if len(args) >= 4:
-            key = "{}.{}".format(args[0], args[1])
-            cast = type(eval(args[3]))
-            arg3 = args[3]
-            arg3 = arg3.strip('"')
-            arg3 = arg3.strip("'")
-            setattr(storage.all()[key], args[2], cast(arg3))
-            storage.all()[key].save()
-        elif len(args) == 0:
+        args = line.split()
+        no_change = ["id", "created_at", "updated_at"]
+        obj_dict = storage.all()  # all() function from file_storage.py
+        if not args:
             print("** class name missing **")
-        elif args[0] not in HBNBCommand.__classes:
+        elif args[0] not in __classes.keys():
             print("** class doesn't exist **")
         elif len(args) == 1:
             print("** instance id missing **")
-        elif ("{}.{}".format(args[0], args[1])) not in storage.all().keys():
-            print("** no instance found **")
-        elif len(args) == 2:
-            print("** attribute name missing **")
         else:
-            print("** value missing **")
-
-
-def parse(line):
-    """Helper method to parse user typed input"""
-    return tuple(line.split())
+            class_id = "{}.{}".format(args[0], args[1])
+            if class_id not in storage.all:
+                print("** no instance found **")
+            elif len(args) < 3:
+                print("** attribute name missing **")
+            elif len(args) < 4:
+                print("** value missing **")
+            elif args[2] not in no_change:
+                obj = obj_dict[class_id]
+                obj.__dict__[args[2]] = args[3]
+                obj.updated_at = datetime.now
+                obj.storage.save()
 
 
 if __name__ == '__main__':
