@@ -12,9 +12,8 @@ class HBNBCommand(cmd.Cmd):
     """ Class HBNBCommand CLI, entry command interpreter """
     prompt = '(hbnb) '
     __classes = {
-            'BaseModel'
-            'User'
-            }
+            'BaseModel',
+            'User'}
 
     def emptyline(self):
         """ Method emptyline """
@@ -38,8 +37,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
         else:
             cls_d = {'BaseModel': BaseModel,
-                     'User': User
-                     }
+                     'User': User}
 
             new_obj = cls_d[args]()
             new_obj.save()
