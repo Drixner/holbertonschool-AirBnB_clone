@@ -5,8 +5,7 @@ Module FileStorage
 
 import json
 import os.path
-from models.base_model import BaseModel
-from models.user import User
+
 
 class FileStorage:
     """ class File Storage serialize and deserialize JSON objects """
@@ -33,6 +32,9 @@ class FileStorage:
 
     def reload(self):
         """ Deserialize __objects from JSON file """
+        from models.base_model import BaseModel
+        from models.user import User
+
         dct = {'BaseModel': BaseModel,
                'User': User
                }
