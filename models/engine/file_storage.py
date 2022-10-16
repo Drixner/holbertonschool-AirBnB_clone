@@ -39,11 +39,11 @@ class FileStorage:
         from models.review import Review
 
         dct = {'BaseModel': BaseModel,
-               'User': User
-               'Place': Place
-               'State': State
-               'City': City
-               'Amenity': Amenity
+               'User': User,
+               'Place': Place,
+               'State': State,
+               'City': City,
+               'Amenity': Amenity,
                'Review': Review
                }
 
