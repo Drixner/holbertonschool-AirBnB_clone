@@ -72,7 +72,7 @@ class HBNBCommand(cmd.Cmd):
             del (obj_dict["{}.{}".format(arg[0], arg[1])])
             storage.save()
 
-    def do_all(self, line):
+    def do_all(self, args):
         """ Print all objects or all objects of specified class """
         yes = 0
         all_obj = [str(v) for v in storage.all().values()]
