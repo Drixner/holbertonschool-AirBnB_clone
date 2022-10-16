@@ -18,11 +18,11 @@ class HBNBCommand(cmd.Cmd):
     prompt = '(hbnb) '
     __classes = {
             'BaseModel',
-            'User'
-            'Place'
-            'State'
-            'City'
-            'Amenity'
+            'User',
+            'Place',
+            'State',
+            'City',
+            'Amenity',
             'Review'
             }
 
@@ -48,11 +48,11 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
         else:
             cls_d = {'BaseModel': BaseModel,
-                     'User': User
-                     'Place': Place
-                     'State': State
-                     'City': City
-                     'Amenity': Amenity
+                     'User': User,
+                     'Place': Place,
+                     'State': State,
+                     'City': City,
+                     'Amenity': Amenity,
                      'Review': Review
                      }
 
