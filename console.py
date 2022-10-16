@@ -35,7 +35,9 @@ class HBNBCommand(cmd.Cmd):
         elif args not in HBNBCommand.__classes:
             print("** class doesn't exist **")
         else:
-            cls_d = {'BaseModel': BaseModel}
+            cls_d = {'BaseModel': BaseModel,
+                     'User': User
+                     }
 
             new_obj = cls_d[args]()
             new_obj.save()
