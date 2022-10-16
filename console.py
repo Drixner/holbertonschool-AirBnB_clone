@@ -99,12 +99,12 @@ class HBNBCommand(cmd.Cmd):
         obj_dict = storage.all()  # all() function from file_storage.py
         if not line:
             print("** class name missing **")
-        elif args[0] not in HBNBCommand.__classes.keys():
+        elif args[0] not in HBNBCommand.__classes:
             print("** class doesn't exist **")
         elif len(args) == 1:
             print("** instance id missing **")
         else:
-            class_id = "{}.{}".format(args[0], args[1])
+            class_id = args[0] + "." + args[1]
             if class_id not in storage.all():
                 print("** no instance found **")
             elif len(args) < 3:
