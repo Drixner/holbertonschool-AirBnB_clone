@@ -44,7 +44,7 @@ class HBNBCommand(cmd.Cmd):
     def do_show(self, line):
         """ Print string representation: name and id """
         arg = line.split()
-        obj_dict = storage.all()  # all() function from file_storage.py
+        obj_dict = storage.all()  # all() method from file_storage.py
         if len(arg) == 0:
             print("** class name missing **")
         elif arg[0] not in HBNBCommand.__classes:
@@ -59,7 +59,7 @@ class HBNBCommand(cmd.Cmd):
     def do_destroy(self, line):
         """ Destroy instance specified by user; save changes to JSON file """
         arg = line.split()
-        obj_dict = storage.all()  # all() function from file_storage.py
+        obj_dict = storage.all()  # all() method from file_storage.py
         if len(arg) == 0:
             print("** class name missing **")
         elif arg[0] not in HBNBCommand.__classes:
@@ -83,7 +83,7 @@ class HBNBCommand(cmd.Cmd):
             arg_list = args.split()
         if args and arg_list[0] in HBNBCommand.__classes:
             yes = 1
-            all_obj = storage.all()  # all() function from file_storage.py
+            all_obj = storage.all()  # all() method from file_storage.py
             name = arg_list[0]
             all_obj = [str(v) for k, v in all_obj.items()
                        if name == v.__class__.__name__]
@@ -93,10 +93,10 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
 
     def do_update(self, line):
-        """Update if given exact object, exact attribute"""
+        """ Update if given exact object, exact attribute """
         args = line.split()
         no_change = ["id", "created_at", "updated_at"]
-        obj_dict = storage.all()  # all() function from file_storage.py
+        obj_dict = storage.all()  # all() method from file_storage.py
         if not line:
             print("** class name missing **")
         elif args[0] not in HBNBCommand.__classes:
@@ -114,7 +114,6 @@ class HBNBCommand(cmd.Cmd):
             elif args[2] not in no_change:
                 obj = obj_dict[class_id]
                 obj.__dict__[args[2]] = args[3]
-                #  obj.updated_at = datetime.now()
                 obj.save()
 
 
