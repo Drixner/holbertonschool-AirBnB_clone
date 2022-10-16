@@ -74,24 +74,23 @@ class HBNBCommand(cmd.Cmd):
 
     def do_all(self, line):
         """ Print all objects or all objects of specified class """
-        args = parse(line)  # Split user input into tokens (see bottom)
-        obj_list = []
-        if len(line) == 0:
-            for objs in storage.all().values():
-                obj_list.append(objs)
-            print(obj_list)
-        elif args[0] in HBNBCommand.__classes:
-            for key, objs in storage.all().items():
-                if args[0] in key:
-                    obj_list.append(objs)
-            print(obj_list)
-        else:
-            print("** class doesn't exist **")
+        yes = 0
+        all_obj = [str(v) for v in storage.all().values()]
+        if not args:
+            yes = 1
+            print('{}'.format(all_obj))
+        elif args:
+            arg_list = args.split()
+        if args and arg_list[0] in HBNBCommand.__classes:
+            yes = 1
+            all_obj = storage.all()
+            name = arg_list[0]
+            all_obj = [str(v) for k, v in all_obj.items()
+                       if name == v.__class__.__name__]
+            print(all_obj)
 
-
-def parse(line):
-    """ Helper function to parse user input """
-    return tuple(line.split())
+        if yes != 1:
+            print('** class doesn\'t exist **')
 
 
 if __name__ == '__main__':
