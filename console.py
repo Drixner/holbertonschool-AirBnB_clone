@@ -101,7 +101,7 @@ class HBNBCommand(cmd.Cmd):
             arg3 = args[3]
             arg3 = arg3.strip('"')
             arg3 = arg3.strip("'")
-            setattr(storage.all()[key], args[3], cast(arg[2]))
+            setattr(storage.all()[key], args[2], cast(arg3))
             storage.all()[key].save()
         elif len(args) == 0:
             print("** class name missing **")
