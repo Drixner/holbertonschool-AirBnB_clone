@@ -89,7 +89,7 @@ class HBNBCommand(cmd.Cmd):
                        if name == v.__class__.__name__]
             print(all_obj)
 
-        if yes != 1:
+        if yes == 0:
             print("** class doesn't exist **")
 
 
