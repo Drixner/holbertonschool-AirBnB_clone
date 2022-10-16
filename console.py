@@ -97,7 +97,7 @@ class HBNBCommand(cmd.Cmd):
         args = parse(line)
         if len(args) >= 4:
             key = "{}.{}".format(args[0], args[1])
-            cast = type(eval(args[2]))
+            cast = type(eval(args[3]))
             arg3 = args[3]
             arg3 = arg3.strip('"')
             arg3 = arg3.strip("'")
