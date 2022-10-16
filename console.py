@@ -114,7 +114,7 @@ class HBNBCommand(cmd.Cmd):
             elif args[2] not in no_change:
                 obj = obj_dict[class_id]
                 obj.__dict__[args[2]] = args[3]
-                obj.updated_at = datetime.now()
+                #  obj.updated_at = datetime.now()
                 obj.storage.save()
 
 
