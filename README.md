@@ -14,6 +14,7 @@
 - [Storage](#storage)
 - [Console](#console)
 - [How to Test](#how-to-test)
+- [Authors](#authors)
 
 ## Description
 HolbertonBnB is a web app with a full development of back-end and front-end API
