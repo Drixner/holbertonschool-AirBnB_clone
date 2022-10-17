@@ -18,7 +18,7 @@ class Test_State(unittest.TestCase):
         test for testing States"""
         FileStorage._FileStorage__file_path = "test.json"
         self.state = State()
-        self.state.name = "Florida"
+        self.state.name = "Arequipa"
         self.state.save()
 
     def test_docstring_State(self):
