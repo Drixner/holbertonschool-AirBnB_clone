@@ -2,10 +2,10 @@
 [![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](http://commonmark.org)
 ![GitHub last commit](https://img.shields.io/github/last-commit/Drixner/holbertonschool-AirBnB_clone)
 
-# AirBnB clone project
+# AirBnB - The Console
 
 <p align="center">
-  <img src=" " alt="Hbton logo">
+  <img src="https://i.imgur.com/WqHvIJs.png" alt="Hbton logo">
 </p>
 
 # Table of Contents
@@ -237,3 +237,8 @@ $ python3 unittest -m tests/test_console.py
 ## Authors
 | [<img src="https://avatars.githubusercontent.com/u/103861356?v=4" width=85><br><sub> Drixner Condor </sub>](https://github.com/Drixner) | [<img src="https://avatars.githubusercontent.com/u/98289735?v=4" width=85><br><sub> Salomón Chambi </sub>](https://github.com/schambig) |
 | :---: | :---: |
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=60&section=footer"/>
+</p>
+
