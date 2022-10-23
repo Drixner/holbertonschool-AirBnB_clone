@@ -8,7 +8,7 @@
   <img src="https://i.imgur.com/WqHvIJs.png" alt="Hbton logo">
 </p>
 
-# Table of Content
+# Table of Contents
 - [Description](#description)
 - [Classes](#classes)
 - [Storage](#storage)
