@@ -212,7 +212,7 @@ b7c2338a-7971-436b-a212-6beed80cbb33
 (hbnb)
 (hbnb) update User b7c2338a-7971-436b-a212-6beed80cbb33 first_name "Betty"
 <971-436b-a212-6beed80cbb33 first_name "Betty"
-(hbnb) User.show("b7c2338a-7971-436b-a212-6beed80cbb33")
+(hbnb) show User b7c2338a-7971-436b-a212-6beed80cbb33
 [User] (b7c2338a-7971-436b-a212-6beed80cbb33) {'first_name': 'Betty', 'id':
 'b7c2338a-7971-436b-a212-6beed80cbb33', 'updated_at': datetime.datetime(2022, 10
 , 16, 19, 40, 21, 347198), 'created_at': datetime.datetime(2022, 10, 16, 19, 39,
@@ -238,6 +238,8 @@ $ python3 unittest -m tests/test_console.py
 ## Authors
 | [<img src="https://avatars.githubusercontent.com/u/103861356?v=4" width=85><br><sub> Drixner Condor </sub>](https://github.com/Drixner) | [<img src="https://avatars.githubusercontent.com/u/98289735?v=4" width=85><br><sub> Salomón Chambi </sub>](https://github.com/schambig) |
 | :---: | :---: |
+
+[Back to top](#airbnb---the-console)<!--@schambig-->
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=60&section=footer"/>
